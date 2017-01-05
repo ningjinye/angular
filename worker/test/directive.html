@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../public/javascripts/angular/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myapp">
+<div menu>
+    123
+</div>
+
+</body>
+<script>
+    angular.module("myapp",[]).directive("menu",function(){
+        return {
+            restrict:"A",
+            templateUrl:"demo.html",
+            link:function($scope,b,c){
+                $scope.data=[
+                    {
+                        name:"111",
+                        son:[
+                            {name:"1-1"},
+                            {name:"1-1"},
+                            {name:"1-1"},
+                            {name:"1-1"}
+                        ],
+                    },
+                    {
+                        name:"222",
+                        son:[
+                            {name:"2-1"},
+                            {name:"2-1"},
+                            {name:"2-1"},
+                            {name:"2-1"}
+                        ],
+                    },
+                    {
+                        name:"333",
+                        son:[
+                            {name:"3-1"},
+                            {name:"3-1"},
+                            {name:"3-1"},
+                            {name:"3-1"}
+                        ],
+                    }
+                ];
+                $scope.a=0;
+                $scope.dianji=function(id){
+                    $scope.a=id;
+                }
+            }
+        }
+    })
+</script>
+</html>

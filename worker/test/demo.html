@@ -1,0 +1,8 @@
+<ul>
+    <li ng-repeat="item in data">
+        <span ng-click="dianji($index)">{{item.name}}</span>
+        <ul ng-show="$index==a">
+            <li ng-repeat="item1 in item.son">{{item1.name}}</li>
+        </ul>
+    </li>
+</ul>
